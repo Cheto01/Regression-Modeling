@@ -45,4 +45,27 @@ def data_num(df:pd.DataFrame):
     return df
 
 
-    
+    def pred_data_processing(user_input:dict):
+        """User inputs through arguments parser
+
+        Args:
+            user_input (dict): dictionary of inputs
+        """
+        
+        attributes_to_remove = ['first', 'last', 'notes']  # List of attributes to remove
+
+        # Remove attributes provided by the user
+        for attribute in attributes_to_remove:
+            try:
+                del user_input[attribute]
+                gender_mapping= {'Male': 1, 'Female': 0}
+            except KeyError:
+                pass
+        if user_input.sex =='Male':
+            user_input.sex = 1
+        elif user_input.sex =="Female":
+            user_input.sex ==0
+        else:
+            print("The gender is not properly defined")
+                
+                
