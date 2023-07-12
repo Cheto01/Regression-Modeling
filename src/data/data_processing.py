@@ -17,7 +17,8 @@ def feature_selection(df:pd.DataFrame):
     nonexistent_columns = [col for col in columns_to_remove if col not in df.columns]
     try:
         df = df.drop(columns_to_remove, axis=1)
-        print("Columns removed successfully.")
+        df = df.dropna()
+        print("Features processed successfully")
     except KeyError:
         print("Error: The following attribute(s) do not exist in the DataFrame:", ", ".join(nonexistent_columns))
     return df
