@@ -55,3 +55,23 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+# main.py
+---------------------------------------------------------------------
+To run the model training:
+Run:`python main.py --data --model RF --crossval`
+
+This will train a Random Forest Classifier (RF) model with cross-validation. You can customize the command line arguments and their behavior on 
+* `model`: Train a specific model or a list of models. you can choose among('`LR`', '`RF`', '`DT`', '`GNB`', '`KNN`', '`SVM`', '`AB`', '`BG`', '`all`')
+* `crossval`: Train using a crossvalidation or not. This is a binary choice(`True` or `False`),
+
+
+# predict.py
+______________________________________________________________________
+
+To run a test on the trained models, run the following command:
+
+`python predict.py --model_path "path_to_model.pkl" --sex "Male" --lang "English" --age 25`
+
+
