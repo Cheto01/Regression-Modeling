@@ -10,15 +10,26 @@ def get_training_testing_data(
         scale_features: bool = False,
         random_state: int = 42
         ):
-
-    # TODO: THIS goes to data and dataset preperation
-    df = df.drop(['first', 'last', 'notes'], axis=1)  # Drop unnecessary columns
-    # Convert 'sex' attribute to numerical values using label encoding
-    sex_mapping = {'Male': 1, 'Female': 0}  # Define the mapping for each category
-    df['sex'] = df['sex'].map(sex_mapping)
+    if scale_features:
+        df['age'] = scale_feature(df['age'])
+        df['hours_studied'] = scale_feature(df['hours_studied'])
+        
     X = df.drop(target, axis=1)
     y = df[target]
     return train_test_split(X, y, test_size=test_size, random_state=random_state)
+
+def get_prediction_data(
+    df: pd.DataFrame,
+    target: str,
+    scale_features: bool = False,
+    ):
+    if scale_features:
+        df['age'] = scale_feature(df['age'])
+        df['hours_studied'] = scale_feature(df['hours_studied'])
+    X = df.drop(target, axis=1)
+    y = df[target]
+    return X, y
+
 
 def scale_feature(feature: np.ndarray, scaler:str='normalize'):
     """scales a feature to be centered around 0 and have a standard deviation of 1

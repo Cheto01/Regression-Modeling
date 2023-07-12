@@ -1,10 +1,12 @@
 import numpy as np
 import pickle
 import argparse
-from data.data_processing import 
+from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import accuracy_score
 
-def load_model(model_path):
-    with open(model_path, 'rb') as f:
+
+def load_model(model_name):
+    with open('models/'+model_name+'.pkl', 'rb') as f:
         model = pickle.load(f)
     return model
 
@@ -19,6 +21,12 @@ def predict_user_input(model, user_input):
     predictions = model.predict(input_array)
 
     return predictions
+
+def predict(model, x, true_label=None):
+    prediction = model.predict(x)
+    if true_label is not None:
+        return prediction, precision_recall_fscore_support(true_label, prediction), accuracy_score(true_label, prediction)
+    return prediction
 
 if __name__ == '__main__':
     # Parse command line arguments

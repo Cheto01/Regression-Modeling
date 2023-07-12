@@ -9,7 +9,7 @@ from sklearn.model_selection import cross_val_score
 import numpy as np
 from typing import Union
 import pickle
-from ..features.build_features import get_training_testing_data, scale_feature
+#from ..features.build_features import get_training_testing_data, scale_feature
 
 MODELS = ['LR', 'RF', 'DT', 'GNB', 'KNN', 'SVM', 'AB', 'BG', 'all']
 def _import_model(model_name: Union[str, list]):
@@ -31,7 +31,7 @@ def _import_model(model_name: Union[str, list]):
         elif model_name == 'RF':
             return RandomForestClassifier(n_estimators=100, warm_start=True)
         elif model_name == 'DT':
-            return DecisionTreeClassifier(n_estimators=50)
+            return DecisionTreeClassifier()
         elif model_name == 'GNB':
             return GaussianNB()
         elif model_name == 'KNN':
@@ -56,13 +56,13 @@ def train_model(
     if isinstance(model, dict):
         for mn, m in model.items():
             model[mn] = m.fit(X_train, y_train)
-            with open(f'../../models/{mn}.pkl', 'wb') as f:
+            with open(f'/models/{mn}.pkl', 'wb') as f:
                 pickle.dump(m, f)
         if cross_validation:
             scores = {mn: cross_val_score(m, X_train, y_train) for mn, m in model.items()}
     else:
         model = model.fit(X_train, y_train)
-        with open(f'../../models/{model_name}.pkl', 'wb') as f:
+        with open(f'models/{model_name}.pkl', 'wb') as f:
             pickle.dump(model, f)
         if cross_validation:
             scores = cross_val_score(model, X_train, y_train)
