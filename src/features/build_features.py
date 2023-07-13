@@ -1,4 +1,5 @@
 import pandas as pd
+from src.data.data_processing import feature_selection
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import numpy as np
@@ -43,7 +44,11 @@ def scale_feature(feature: np.ndarray, scaler:str='normalize'):
     """
     SCALERS = ['normalize', 'max_min']
     assert scaler in SCALERS, f'scaler must be one of {SCALERS}'
+    if isinstance(feature, pd.Series):
+        feature = feature.values
+    
     if scaler == 'normalize':
-        return StandardScaler().fit_transform(feature)
-    return MinMaxScaler().fit_transform(feature)
+        return StandardScaler().fit_transform(feature.reshape(-1, 1))
+    
+    return MinMaxScaler().fit_transform(feature.reshape(-1, 1))
     

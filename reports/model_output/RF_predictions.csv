@@ -10,7 +10,7 @@
 8,True,False
 9,False,False
 10,True,False
-11,True,False
+11,False,False
 12,False,False
 13,False,True
 14,True,True
@@ -29,7 +29,7 @@
 27,True,False
 28,True,False
 29,False,False
-30,True,True
+30,False,True
 31,False,True
 32,False,False
 33,False,False
@@ -40,9 +40,9 @@
 38,False,True
 39,True,True
 40,False,True
-41,True,False
+41,False,False
 42,True,True
-43,False,True
+43,True,True
 44,True,False
 45,False,False
 46,True,True
@@ -69,11 +69,11 @@
 67,False,False
 68,True,True
 69,False,False
-70,False,True
+70,True,True
 71,True,True
 72,True,True
 73,True,True
-74,False,True
+74,True,True
 75,True,True
 76,False,False
 77,False,True
@@ -114,7 +114,7 @@
 112,False,False
 113,False,True
 114,True,True
-115,False,True
+115,True,True
 116,True,True
 117,False,False
 118,False,True
@@ -122,8 +122,8 @@
 120,True,True
 121,True,True
 122,True,False
-123,False,True
-124,True,False
+123,True,True
+124,False,False
 125,False,True
 126,False,True
 127,False,True
@@ -157,7 +157,7 @@
 155,False,False
 156,True,False
 157,True,True
-158,False,True
+158,True,True
 159,False,False
 160,False,False
 161,False,False
@@ -171,7 +171,7 @@
 169,True,False
 170,False,True
 171,False,False
-172,False,True
+172,True,True
 173,False,False
 174,True,True
 175,False,False
@@ -182,7 +182,7 @@
 180,False,True
 181,False,True
 182,True,False
-183,True,True
+183,False,True
 184,False,False
 185,True,False
 186,False,True
@@ -210,7 +210,7 @@
 208,True,True
 209,True,False
 210,False,True
-211,True,False
+211,False,False
 212,False,False
 213,False,False
 214,True,False
@@ -230,7 +230,7 @@
 228,False,False
 229,True,True
 230,True,True
-231,False,False
+231,True,False
 232,False,False
 233,False,True
 234,False,False
@@ -240,7 +240,7 @@
 238,False,False
 239,False,False
 240,True,False
-241,True,True
+241,False,True
 242,False,True
 243,False,False
 244,True,False
@@ -253,13 +253,13 @@
 251,False,True
 252,True,False
 253,False,False
-254,False,True
+254,True,True
 255,True,True
 256,True,True
 257,True,True
 258,True,True
 259,False,True
-260,False,True
+260,True,True
 261,True,True
 262,False,True
 263,False,False
@@ -278,7 +278,7 @@
 276,False,False
 277,True,False
 278,True,False
-279,False,True
+279,True,True
 280,False,False
 281,True,False
 282,False,False
@@ -296,7 +296,7 @@
 294,True,True
 295,True,True
 296,False,False
-297,False,True
+297,True,True
 298,True,False
 299,False,True
 300,False,False
@@ -325,7 +325,7 @@
 323,True,True
 324,True,True
 325,True,False
-326,False,True
+326,True,True
 327,True,True
 328,False,True
 329,True,True
@@ -340,7 +340,7 @@
 338,False,False
 339,True,False
 340,True,False
-341,False,True
+341,True,True
 342,True,True
 343,False,False
 344,True,True
@@ -356,11 +356,11 @@
 354,False,True
 355,True,True
 356,True,True
-357,False,False
+357,True,False
 358,False,False
 359,False,False
 360,False,True
-361,False,True
+361,True,True
 362,True,True
 363,True,False
 364,True,False
@@ -383,17 +383,17 @@
 381,False,True
 382,False,False
 383,False,False
-384,True,False
+384,False,False
 385,True,False
 386,False,False
 387,False,False
 388,False,True
 389,False,False
 390,True,False
-391,False,False
+391,True,False
 392,True,False
 393,True,False
-394,True,True
+394,False,True
 395,False,False
 396,True,False
 397,True,True
@@ -409,7 +409,7 @@
 407,True,False
 408,False,True
 409,True,True
-410,True,False
+410,False,False
 411,False,True
 412,False,False
 413,False,True
@@ -443,7 +443,7 @@
 441,False,False
 442,False,False
 443,True,True
-444,False,False
+444,True,False
 445,True,True
 446,True,True
 447,False,True
@@ -467,7 +467,7 @@
 465,False,False
 466,True,True
 467,True,False
-468,False,True
+468,True,True
 469,False,False
 470,False,True
 471,False,False
@@ -482,7 +482,7 @@
 480,False,True
 481,True,True
 482,False,True
-483,False,True
+483,True,True
 484,True,True
 485,False,False
 486,False,True
@@ -505,7 +505,7 @@
 503,True,True
 504,False,False
 505,True,False
-506,False,True
+506,True,True
 507,True,False
 508,True,True
 509,False,False
@@ -543,7 +543,7 @@
 541,True,True
 542,True,True
 543,False,False
-544,False,True
+544,True,True
 545,False,True
 546,False,False
 547,False,True
@@ -583,7 +583,7 @@
 581,False,False
 582,False,False
 583,False,False
-584,True,True
+584,False,True
 585,False,True
 586,True,False
 587,False,True

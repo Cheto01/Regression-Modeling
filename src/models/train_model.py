@@ -5,13 +5,14 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.ensemble import AdaBoostClassifier, BaggingClassifier
+from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import cross_val_score
 import numpy as np
 from typing import Union
 import pickle
 #from ..features.build_features import get_training_testing_data, scale_feature
 
-MODELS = ['LR', 'RF', 'DT', 'GNB', 'KNN', 'SVM', 'AB', 'BG', 'all']
+MODELS = ['LR', 'RF', 'DT', 'GNB', 'KNN', 'SVM', 'AB', 'BG','MLP' 'all']
 def _import_model(model_name: Union[str, list]):
     if isinstance(model_name, str):
         assert model_name in MODELS, f'model_name must be one of {MODELS}'
@@ -24,7 +25,8 @@ def _import_model(model_name: Union[str, list]):
                 'KNN': KNeighborsClassifier(),
                 'SVM': SVC(kernel='poly', random_state=None, gamma='scale', probability=True),
                 'AB': AdaBoostClassifier(),
-                'BG': BaggingClassifier(n_estimators=50)
+                'BG': BaggingClassifier(n_estimators=50),
+                'MLP':MLPClassifier(max_iter=500)
             }
         elif model_name == 'LR':
             return LogisticRegression(solver='liblinear',max_iter=500)
@@ -42,6 +44,8 @@ def _import_model(model_name: Union[str, list]):
             return AdaBoostClassifier()
         elif model_name == 'BG':
             return BaggingClassifier(n_estimators=50)
+        elif model_name == 'MLP':
+                return MLPClassifier(max_iter=500)
     elif isinstance(model_name, list):
         return {model: _import_model(model) for model in model_name}
 

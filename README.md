@@ -1,31 +1,29 @@
 woven
 ==============================
 
-Woven Data science challenge
+Woven By Toyota Data science challenge
 
-Project Organization
+Project Organization. This repository was created using a cookie cutter template.
 ------------
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    │   ├── external       <- Data from third party sources [EMPTY].
+    │   ├── interim        <- Intermediate data that has been transformed [EMPTY].
+    │   ├── processed      <- The final data [EMPTY].
+    │   └── raw            <- The original, provided data.
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── notebooks          <- Jupyter notebooks. The exploratory data Analysis notebook is can be found here.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    ├── references         <- Data dictionaries, provided explanatory materials.
     │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    ├── reports            <- Generated analysis .
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
@@ -35,8 +33,8 @@ Project Organization
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
+    │   ├── data           <- Scripts to load or process data
+    │   │   └── data_processing.py
     │   │
     │   ├── features       <- Scripts to turn raw data into features for modeling
     │   │   └── build_features.py
@@ -46,7 +44,7 @@ Project Organization
     │   │   ├── predict_model.py
     │   │   └── train_model.py
     │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations(TBD)
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
@@ -56,15 +54,28 @@ Project Organization
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
+# Installation
+
+Install the environment dependancies by running 
+
+`pip install -r requirements.txt`
+
 
 # main.py
 ---------------------------------------------------------------------
-To run the model training:
-Run:`python main.py --data --model RF --crossval`
+To run the code and test the training and the test accuracy, please, use thefollowing command:
 
-This will train a Random Forest Classifier (RF) model with cross-validation. You can customize the command line arguments and their behavior on 
-* `model`: Train a specific model or a list of models. you can choose among('`LR`', '`RF`', '`DT`', '`GNB`', '`KNN`', '`SVM`', '`AB`', '`BG`', '`all`')
-* `crossval`: Train using a crossvalidation or not. This is a binary choice(`True` or `False`),
+`python main.py --train True --predict True --model RF --crossval True --scale_features True`
+
+### Flags
+
+* --`train` : Will train a new model if the flag is `True`, will test a trained one elsewhere. Before setting this flag to False, make sure the model specified the `model` flag exists. 
+For instance, `--model DT` can be used as long as the following exists: `models/DT.pkl`.
+* --`predict`: If the flag is `True`, it will perform a prediction on a test dataset and print out a test f1 accuracy score. it will also save the predicted label in `reports/model_output/`.
+* --`model`: Will this flag, a user can choose which model to use from the following list ('`LR`', '`RF`', '`DT`', '`GNB`', '`KNN`', '`SVM`', '`AB`', '`BG`','`MLP` '`all`'). If `all` is used, the training and prediction will be perfomed by all the models.
+* --`crossval`: This flag allows to use or not a cross validation in the training. Since the dataset is limited, this can help to increase the performance and the generalization.
+* --`scale_features`: This flag allows to use or not a feature normalization. If set to `True` a feature normalization using `StandardScaler` is performed on `age` and `hours_studied`. This has a tiny better impact on the accuracy for this dataset.
+
 
 
 # predict.py

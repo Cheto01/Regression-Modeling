@@ -4,7 +4,7 @@ from src.models.train_model import train_model, MODELS
 from src.models.predict import predict, predict_user_input, load_model
 from src.features.build_features import get_training_testing_data, scale_feature, get_prediction_data
 import pandas as pd
-from src.data.data_processing import import_data
+from src.data.data_processing import import_data, feature_selection
 from absl import flags, logging
 import os
 

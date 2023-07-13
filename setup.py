@@ -4,7 +4,7 @@ setup(
     name='src',
     packages=find_packages(),
     version='0.1.0',
-    description='Data science challenge',
+    description='Woven by TOYOTA, Data science challenge',
     author='Cherubin_Mugisha',
     license='MIT',
 )
