@@ -78,11 +78,6 @@ For instance, `--model DT` can be used as long as the following exists: `models/
 
 
 
-# predict.py
-______________________________________________________________________
 
-To run a test on the trained models, run the following command:
-
-`python predict.py --model_path "path_to_model.pkl" --sex "Male" --lang "English" --age 25`
 
 
