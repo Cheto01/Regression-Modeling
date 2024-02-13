@@ -36,18 +36,6 @@ parser.add_argument('--data', type=str, default='data/raw/woven_data.tsv', help=
 # parser.add_argument('--model_path', type=str, default='models/LR.pkl', help='Path to the trained model file')
 parser.add_argument('--output_path', type=str, default='reports/model_output/', help='Path to the trained model file')
 
-#parser.add_argument('--sexe', type=str, help='Sex attribute, male/female')
-#parser.add_argument('--lang', type=str, help='Language attribute')
-#parser.add_argument('--country', type=str, help='country attribute')
-#parser.add_argument('--age', type=int, help='Age attribute')
-#parser.add_argument('--first', type=str, help='First name')
-#parser.add_argument('--last', type=str, help='Last name attribute')
-#parser.add_argument('--hours_studied', type=float, help='studied hours attribute')
-#parser.add_argument('--dojo_class', type=bool, help='Dojo class taken attribute')
-#parser.add_argument('--test_prep', type=bool, help='Test preparation')
-#parser.add_argument('--pass', type=bool, help='Pass or not')
-#parser.add_argument('--notes', type=str, help='Notes attribute')
-
 args = parser.parse_args()
 
 def main(args=args):
@@ -89,34 +77,3 @@ def main(args=args):
         
 if __name__ == '__main__':
     main(args)
-            
-# Get user input
-# user_input = [args.sex, args.lang, args.country, args.age, args.first, args.last, args.hours_studied, args.dojo_class, args.test_prep, args.test_pass, args.notes]
-
-
-# Perform prediction
-#predictions = predict_user_input(model, user_input)
-#
-#
-## Load and preprocess the data
-#df = pd.read_csv(args.data)
-#X_train, X_test, y_train, y_test = get_training_testing_data(df, target='pass')
-#
-## Scale the features if needed
-#X_train = scale_feature(X_train)
-#X_test = scale_feature(X_test)
-#
-## Train the model
-#model_name = args.model
-#model = train_model(model_name, X_train, y_train, cross_validation=args.crossval)
-#
-## Print the trained model and cross-validation scores
-#print(f"Trained Model: {model}")
-#if isinstance(model, tuple):
-#    trained_model, scores = model
-#    print("Cross-validation scores:")
-#    for mn, score in scores.items():
-#        print(f"{mn}: {np.mean(score):.4f} (±{np.std(score):.4f})")
-#else:
-#    print("Cross-validation score:", model)
-#
