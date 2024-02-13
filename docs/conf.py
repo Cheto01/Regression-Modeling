@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# woven documentation build configuration file, created by
+# REgression-Modeling documentation build configuration file, created by
 # sphinx-quickstart.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -41,7 +41,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'woven'
+project = u'Regression-Modeling'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'wovendoc'
+htmlhelp_basename = 'Regression-Modelingdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,8 +184,8 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
     ('index',
-     'woven.tex',
-     u'woven Documentation',
+     'Regression-Modeling.tex',
+     u'Regression-Modeling Documentation',
      u"Cherubin_Mugisha", 'manual'),
 ]
 
@@ -215,7 +215,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'woven', u'woven Documentation',
+    ('index', 'Regression-Modeling', u'Regression-Modeling Documentation',
      [u"Cherubin_Mugisha"], 1)
 ]
 
@@ -229,8 +229,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'woven', u'woven Documentation',
-     u"Cherubin_Mugisha", 'woven',
+    ('index', 'Regression-Modeling', u'Regression-Modeling Documentation',
+     u"Cherubin_Mugisha", 'Regression-Modeling',
      'Data science challenge', 'Miscellaneous'),
 ]
 
