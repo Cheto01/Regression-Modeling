@@ -1,6 +1,11 @@
 Regression modeling analysis
 ==============================
 
+This project aims to present a study that elucidates the correlation between various parameters within the provided dataset. 
+Specifically, the parameters we are examining include: sex, lang, country, age, first name, last name, hours studied, dojo class, test preparation, pass/fail status, and notes.
+
+Our goal is to analyze the correlation between dependent and independent features through Exploratory Data Analysis(EDA) techniques, and to employ various models to predict student notes. 
+For more detailed information, please refer to the annexed notebook: (EDA Notebook)[https://github.com/Cheto01/Regression-Modeling/blob/master/notebooks/EDA.ipynb].
 
 
 Project Organization. This repository was created using a cookie cutter template.
